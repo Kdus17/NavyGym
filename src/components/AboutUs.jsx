@@ -42,7 +42,7 @@ const threeCards = [
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col items-center gap-10 pt-7 bg-neutral-900 w-full">
+    <div id='about' className="flex flex-col items-center gap-10 pt-7 bg-neutral-900 w-full">
        <h1 className="text-white text-4xl"> FORGED IN  <span className="text-red-500">FIRE</span></h1>
         <p className="text-gray-200 text-center max-w-[800px]">The Fitters Gym isn't just a place to work out - it's where ordinary people transform into extraordinary athletes.
 Located in the heart of Addis Ababa, we've built more than a gym; we've built a culture of excellence.</p>
