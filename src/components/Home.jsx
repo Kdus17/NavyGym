@@ -36,7 +36,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <>
+    <div className='min-h-screen bg-neutral-900'>
         {pages.map((page,i)=>{
             return(
                 <div className='absolute inset-0' key={i}>
@@ -46,7 +46,7 @@ useEffect(()=>{
                 </div>
             )
         })}
-        <div className='relative  w-screen  h-screen flex items-center justify-around '>
+        <div className='relative  min-h-screen flex items-center justify-around '>
             <div className=' gap-8 w-2/3 flex flex-col '>
                 <div className='bg-red-600/20 border border-red-600/30 rounded-md w-fit flex px-4 gap-2 py-1 '>
                     <Zap className='text-red-500'/>
@@ -70,6 +70,6 @@ useEffect(()=>{
             </div>
         </div>
 
-    </>
+    </div>
   )
 }
