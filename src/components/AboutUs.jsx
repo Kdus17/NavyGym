@@ -42,14 +42,14 @@ const threeCards = [
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col items-center gap-10 pt-7 bg-neutral-900 w-full">
+    <section id='about' className="flex flex-col items-center gap-10 pt-7 bg-neutral-900 w-full">
        <h1 className="text-white text-4xl"> FORGED IN  <span className="text-red-500">FIRE</span></h1>
         <p className="text-gray-200 text-center max-w-[800px]">The Fitters Gym isn't just a place to work out - it's where ordinary people transform into extraordinary athletes.
 Located in the heart of Addis Ababa, we've built more than a gym; we've built a culture of excellence.</p>
      
      {/* the four cards */}
 
-     <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-8 w-full px-32'>
+     <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-8 w-full md:px-32'>
       {fourCards.map((card,index)=>{
         return(
           <div key={index} className='flex bg-gradient-to-br from-neutral-900 to-neutral-800 flex-col gap-4 skew-x-3 border-t border-b border-red-500/20 shadow-2xl py-10'>
@@ -102,7 +102,7 @@ Located in the heart of Addis Ababa, we've built more than a gym; we've built a 
         </div>
     
     {/* the  three cards */}
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full px-24 gap-12 py-12'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full md:px-24   gap-12 py-12'>
           {threeCards.map((cards,index)=>{
             return(
               <div key={index} className={`flex flex-col gap-4 ${index == 2? "col-span-1 md:col-span-2 lg:col-span-1":""}  border border-x-0 p-12 bg-neutral-900/80 border-y-neutral-700/50 hover:scale-105 transition-all duration-300 ease-in-out`}>
@@ -113,7 +113,7 @@ Located in the heart of Addis Ababa, we've built more than a gym; we've built a 
             )
           })}
         </div>
-    </div>
+    </section>
   )
 }
 
