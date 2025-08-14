@@ -9,7 +9,7 @@ export default function NavBar() {
     { name: 'Contact', href: '#contact' },
   ];
   return (
-    <div className='flex items-center justify-between px-10 py-2 h md:justify-around md:p-2 select-none z-100 sticky bg-white'>
+    <div className='flex items-center justify-between px-10 py-6 h md:justify-around md:p-2 select-none z-100 sticky bg-transparent text-neutral-300'>
         <p className='py-1'>NavyGym</p>
         <div className='md:flex hidden gap-8 '>
             {navigationItems.map((item,i)=>{
@@ -22,8 +22,8 @@ export default function NavBar() {
             })}
         </div>
         <div className='md:flex hidden gap-4'>
-            <button className='skew-x-12 hover:bg-gray-200 px-2 py-1'><p className='-skew-x-12'>Login</p></button>
-            <button className='skew-x-12 bg-red-600 text-white hover:scale-105 px-2 py-1 transition-all duration-100 ease-in-out'><p className='-skew-x-12'>Vist us</p></button>
+            <button className='skew-x-12 hover:bg-gray-200 px-6 py-3'><p className='-skew-x-12'>Login</p></button>
+            <button className='skew-x-12 bg-red-700 font-semibold text-white hover:scale-105 px-6 py-3 transition-all duration-100 ease-in-out'><p className='-skew-x-12'>Vist us</p></button>
         </div>
         <button className='md:hidden'>
             menu
