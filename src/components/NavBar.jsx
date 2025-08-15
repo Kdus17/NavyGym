@@ -9,7 +9,7 @@ export default function NavBar() {
     { name: 'Contact', href: '#contact' },
   ];
   return (
-    <div className='flex items-center justify-between px-10 py-6 h md:justify-around md:p-2 select-none z-100 sticky bg-transparent text-neutral-300'>
+    <div className='flex items-center justify-between px-10 py-6 h md:justify-around md:p-2 select-none z-100 sticky top-0 bg-transparent text-neutral-300'>
         <p className='py-1'>NavyGym</p>
         <div className='md:flex hidden gap-8 '>
             {navigationItems.map((item,i)=>{

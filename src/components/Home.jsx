@@ -36,7 +36,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div id ="home"className='min-h-screen bg-neutral-900'>
+    <section id='home' className='min-h-screen bg-neutral-900'>
         {pages.map((page,i)=>{
             return(
                 <div className='absolute inset-0' key={i}>
@@ -70,6 +70,6 @@ useEffect(()=>{
             </div>
         </div>
 
-    </div>
+    </section>
   )
 }
