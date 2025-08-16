@@ -48,10 +48,11 @@ const people = [
 
 export default function Overview() {
   return (
-    <div className='grid grid-cols-4 gap-4 w-full h-full lg:grid-rows-3'>
+    <div className='grid grid-cols-4 gap-4 w-full h-full lg:grid-rows-3 cursor-default'>
         {stats.map((card,index)=>{
             return(
-            <div key={index} className='flex flex-col col-span-4 md:col-span-2 lg:col-span-1 items-center text-center bg-neutral-800 shadow-2xl h-full self-center justify-center py-6 px-4 gap-3 border border-x-0 border-y-1 border-red-500/20 skew-x-2'>
+            <div key={index} className='flex flex-col col-span-4 md:col-span-2 lg:col-span-1 items-center text-center bg-neutral-800 shadow-2xl h-full 
+            self-center justify-center py-6 px-4 gap-3 border border-x-0 border-y-1 border-red-500/20 skew-x-2 md:hover:scale-110 transition-all duration-300 ease-in-out '>
                 <span className='font-bold text-white  text-3xl -skew-x-1'>{card.num}</span>
                 <p className='text-neutral-500 text-center max-w-[80px] self-center -skew-x-2'>{card.being}</p>
                 <span className={`${card.color } -skew-x-1 font-semibold`}>{card.change}</span>

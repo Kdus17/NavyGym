@@ -1,27 +1,41 @@
-import { Bell, LogOutIcon, Settings } from 'lucide-react'
-import React from 'react'
+import { Bell, ChartBar, Dumbbell, LogOutIcon, Radar, Settings, User2 } from 'lucide-react'
+import React, { useState } from 'react'
 import Overview from '../admin/Overview'
+import Customers from '../admin/Customers'
+import Announce from '../admin/Announcments'
+import Machine from '../admin/Machine'
+
+
 
 const cards = [
     {
-        text: "Overview"
+        text: "Overview",
+        icon: <ChartBar/>,
+        component: <Overview/>
     },
     {
-        text: "Customers"
+        text: "Customers",
+        icon: <User2/>,
+        component: <Customers/>
     },
     {
-        text: "Announcments"
+        text: "Announcments",
+        icon: <Radar/>,
+        component: <Announce/>
     },
     {
-        text: "Machines"
+        text: "Machines",
+        icon: <Dumbbell/>,
+        component: <Machine/>
     },
 ]
 
 export default function Admin() {
+const [see,setSee] = useState([])
   return (
-  <div className='flex flex-col bg-neutral-950'>
+  <div className='flex flex-col bg-neutral-950 cursor-default'>
     {/**Nav */}
-    <div className='bg-neutral-700 border border-x-0 border-white/5 flex justify-around p-6'>
+    <div className='bg-neutral-800 border border-x-0 border-white/5 flex justify-around p-6'>
         <div className='flex flex-col'>
             <h1 className='text-white text-3xl font-bold'>Admin Dashboard</h1>
             <p className='text-neutral-400'>Manage your gym operations and members.</p>
@@ -34,19 +48,24 @@ export default function Admin() {
     </div>
 
     <div className='grid lg:grid-cols-3 lg:grid-rows-2 gap-6 p-16 min-h-screen'>
-        <div className='grid grid-row-4 col-span-2 lg:col-span-1 bg-neutral-800 h-fit p-6 gap-3 border border-x-0 border-red-500/5 skew-x-1'>
+        <div className='grid grid-row-4 col-span-2 lg:col-span-1 bg-neutral-800 h-fit p-6 gap-3 border border-x-0 border-red-500/5 skew-x-1 '>
             {cards.map((card,index)=>{
                 return(
-                <div key={index} className='skew-x-3 row-span-1 w-full hover:shadow-2xl  p-4 hover:bg-red-500'>
-                    <p className='-skew-x-4 text-white font-semibold text-lg'>{card.text}</p>
+                <div key={index} className='skew-x-3 row-span-1 w-full hover:shadow-2xl  p-4 hover:bg-red-500 hover:scale-105 transition-all duration-300 ease-in-out' onClick={()=>{setSee(card.text)}}>
+                    <p className='-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
                 </div>
                 )
             })}
             
         </div>
-        <div className='col-span-2 md:row-span-2 h-full'>
-            <Overview />
-        </div>
+
+        {cards.map((card,index)=>{
+            return(
+            <div key={index} className={`col-span-2 md:row-span-2 h-full ${see.includes(card.text)?"block":"hidden"}`}>
+                {card.component}
+            </div>   
+            )
+        })}
         
         
     </div>
