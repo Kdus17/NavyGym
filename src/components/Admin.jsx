@@ -37,22 +37,22 @@ const [see,setSee] = useState([])
     {/**Nav */}
     <div className='bg-neutral-800 border border-x-0 border-white/5 flex justify-around p-6'>
         <div className='flex flex-col'>
-            <h1 className='text-white text-3xl font-bold'>Admin Dashboard</h1>
-            <p className='text-neutral-400'>Manage your gym operations and members.</p>
+            <h1 className='text-white sm:text-3xl text-xl font-bold'>Admin Dashboard</h1>
+            <p className='text-neutral-400 text-xs sm:text-md'>Manage your gym operations and members.</p>
         </div>
-        <div className='flex gap-8 items-center text-neutral-300 '>
-            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Bell className='size-5'/> Notification</div>
-            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Settings className='size-5'/> Settings</div>
-            <div className='flex items-center gap-2 text-red-700 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out' ><LogOutIcon className='size-5'/> Logout</div>
+        <div className='flex gap-4 sm:gap-8 items-center text-neutral-300 '>
+            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Bell className='size-5'/> <span className='hidden sm:block'>Notification</span></div>
+            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Settings className='size-5'/> <span className='hidden sm:block'>Settings</span></div>
+            <div className='flex items-center gap-2 text-red-700 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out' ><LogOutIcon className='size-5'/> <span className='hidden sm:block'>Logout</span></div>
         </div>
     </div>
 
-    <div className='grid lg:grid-cols-3 lg:grid-rows-2 gap-6 p-16 min-h-screen'>
-        <div className='grid grid-row-4 col-span-2 lg:col-span-1 bg-neutral-800 h-fit p-6 gap-3 border border-x-0 border-red-500/5 skew-x-1 '>
+    <div className='grid lg:grid-cols-3 lg:grid-rows-2 gap-6 sm:p-16 min-h-screen'>
+        <div className='grid grid-row-4 col-span-2 lg:col-span-1 bg-neutral-800 h-fit p-6 gap-3 border border-x-0 border-red-500/5 sm:skew-x-1 '>
             {cards.map((card,index)=>{
                 return(
-                <div key={index} className='skew-x-3 row-span-1 w-full hover:shadow-2xl  p-4 hover:bg-red-500 hover:scale-105 transition-all duration-300 ease-in-out' onClick={()=>{setSee(card.text)}}>
-                    <p className='-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
+                <div key={index} className='sm:skew-x-3 row-span-1 w-full hover:shadow-2xl  p-4 hover:bg-red-500 hover:scale-105 transition-all duration-300 ease-in-out' onClick={()=>{setSee(card.text)}}>
+                    <p className='sm:-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
                 </div>
                 )
             })}
