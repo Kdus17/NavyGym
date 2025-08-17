@@ -2,22 +2,22 @@ import { Users,Dumbbell,Clock,Target, Award} from 'lucide-react';
 
 const fourCards = [
   {
-    symbol: <Users className='text-red-600 self-center -skew-x-3 size-8'/>,
+    symbol: <Users className='text-red-600 self-center sm:-skew-x-3 size-8'/>,
     num: "300+",
     blab: "potential members"
   },
   {
-    symbol: <Dumbbell className='text-red-600 self-center -skew-x-3 size-8'/>,
+    symbol: <Dumbbell className='text-red-600 self-center sm:-skew-x-3 size-8'/>,
     num: "50+",
     blab: "equipment"
   },
   {
-    symbol: <Clock className='text-red-600 self-center -skew-x-3 size-8'/>,
+    symbol: <Clock className='text-red-600 self-center sm:-skew-x-3 size-8'/>,
     num: "24/7",
     blab: "Open"
   },
   {
-    symbol: <Target className='text-red-600 self-center -skew-x-3 size-8'/>,
+    symbol: <Target className='text-red-600 self-center sm:-skew-x-3 size-8'/>,
     num: "0",
     blab: "excuses accepted"
   }
@@ -52,10 +52,10 @@ Located in the heart of Addis Ababa, we've built more than a gym; we've built a 
      <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-8 w-full md:px-32'>
       {fourCards.map((card,index)=>{
         return(
-          <div key={index} className='flex bg-gradient-to-br from-neutral-900 to-neutral-800 flex-col gap-4 skew-x-3 border-t border-b border-red-500/20 shadow-2xl py-10'>
+          <div key={index} className='flex bg-gradient-to-br from-neutral-900 to-neutral-800 flex-col gap-4 sm:skew-x-3 border-t border-b border-red-500/20 shadow-2xl py-10'>
             {card.symbol}
-            <span className='text-4xl self-center text-white -skew-x-3 font-bold'>{card.num}</span>
-            <p className='text-lg text-gray-400 self-center -skew-x-3 font-sans capitalize  font-semibold'>{card.blab}</p>
+            <span className='text-4xl self-center text-white sm:-skew-x-3 font-bold'>{card.num}</span>
+            <p className='text-lg text-gray-400 self-center sm:-skew-x-3 font-sans capitalize  font-semibold'>{card.blab}</p>
           </div>
         )
       })}
@@ -89,11 +89,11 @@ Located in the heart of Addis Ababa, we've built more than a gym; we've built a 
                   <br />
                     No stress. No Distractions. No excuses. Just walk in, grab a barbell, and start your transformation. This is how fitness should be.
                 </p>
-                <div className='flex flex-col gap-4 p-6 bg-red-600/20 skew-x-2'>
-                  <h3 className='text-red-400  font-bold text-1xl -skew-x-2'>
+                <div className='flex flex-col gap-4 p-6 bg-red-600/20 sm:skew-x-2'>
+                  <h3 className='text-red-400  font-bold text-1xl sm:-skew-x-2'>
                       THE FITTERS PROMISE
                   </h3>
-                  <p className='text-neutral-300 max-w-[500px] -skew-x-2'>
+                  <p className='text-neutral-300 max-w-[500px] sm:-skew-x-2'>
                     Every piece of equipment is commercial-grade. Every weight is accurate. Every member is committed. When you train here, you're not just working out  you're joining a legacy of strength that spans generations
                   </p>
                 </div>

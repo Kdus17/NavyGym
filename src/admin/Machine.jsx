@@ -1,4 +1,4 @@
-import { Dot } from 'lucide-react';
+import { Delete, Dot, Plus, Trash2Icon } from 'lucide-react';
 import React from 'react'
   const products = [
     {
@@ -55,20 +55,23 @@ export default function Machine() {
       <div className='relative grid lg:grid-cols-2 lg:gap-3 md:grid-cols-2 grid-cols-1 gap-12 bg-neutral-950 w-full'>
         {products.map((card,index)=>{
           return(
-            <div key={index} className='flex flex-col bg-gradient-to-br pb-4 skew-x-1  from-neutral-900 to-neutral-800 cursor-default gap-3'>
-              <div className='relative w-full h-48 '>
+            <div key={index} className='flex flex-col bg-gradient-to-br pb-4 sm:skew-x-1  from-neutral-900 to-neutral-800 cursor-default gap-3'>
+              <div className='relative w-full h-48 select-none'>
                 <img src={card.image} className='object-cover w-full h-full' alt="" />
-                <span className='absolute top-5 bg-red-600 px-2 py-1 uppercase skew-x-12 text-white right-5 text-xs font-bold'><p className='-skew-x-12'>{card.category}</p></span>
+                <span className='absolute top-5 bg-red-600 px-2 py-1 uppercase sm:skew-x-12 text-white right-5 text-xs font-bold'><p className='sm:-skew-x-12'>{card.category}</p></span>
+                <span className='absolute top-12 bg-yellow-600 px-2 py-1 uppercase sm:skew-x-12 text-white right-4 text-xs font-bold'><p className='sm:-skew-x-12'>change image</p></span>
               </div>
-              <h1 className='text-white text-lg font-bold px-2  -skew-x-1'>{card.name}</h1>
-              <p className='text-neutral-500 text-sm px-2 -skew-x-1'>{card.description}</p>
-              <span className='text-red-400 text-sm px-2 -skew-x-1 uppercase'>Key Features:</span>
-              <div className='flex flex-col  text-neutral-400 text-sm font-medium px-2 -skew-x-1 '>
+              <input type='text' className='text-white text-lg font-bold px-2 outline-none border-1 rounded-md  sm:-skew-x-1' value={card.name}/>
+              <textarea className='text-neutral-500 text-sm px-2 sm:-skew-x-1 outline-none border-1 rounded-md caret-amber-50' value={card.description}/>
+              <span className='text-red-400 text-sm px-2 sm:-skew-x-1 uppercase'>Key Features:</span>
+              <div className='flex flex-col  text-neutral-400 text-sm font-medium px-2 sm:-skew-x-1 '>
                 {card.specs.map((spec,index)=>{
                   return(
-                    <p key={index} className='flex items-center '><span><Dot className='text-red-600'/></span>{spec}</p>
+                    <p key={index} className='flex items-center py-1 last:mb-1'><span><Dot className='text-red-600'/></span> <span className='w-full'>{spec}</span> <span className='text-red-600 '><Trash2Icon className='size-5 cursor-pointer'/></span></p>
                   )
                 })}
+                  <div className='flex items-center my-2'><Dot className='text-red-600'/> <input type="text" className='outline-none caret-red-600 w-full border-2 rounded-sm mr-2' /><Plus className=' bg-blue-600 text-white'/></div>
+                  <span className='bg-red-600 px-2 py-1 uppercase sm:skew-x-12 text-white  font-semibold text-center'><p className='sm:-skew-x-12 '>Save Changes</p></span>
               </div>
             </div>
           )

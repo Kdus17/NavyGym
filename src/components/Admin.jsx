@@ -30,9 +30,9 @@ const cards = [
 ]
 
 export default function Admin() {
-const [see,setSee] = useState([])
+const [see,setSee] = useState(['Overview'])
   return (
-  <div className='flex flex-col bg-neutral-950 cursor-default'>
+  <div className='flex flex-col bg-neutral-950 cursor-default min-w-[245px]'>
     {/**Nav */}
     <div className='bg-neutral-800 border border-x-0 border-white/5 flex justify-around p-6'>
         <div className='flex flex-col'>
@@ -51,7 +51,7 @@ const [see,setSee] = useState([])
             {cards.map((card,index)=>{
                 return(
                 <div key={index} className={`sm:skew-x-3 row-span-1 w-full hover:shadow-2xl p-4 ${see.includes(card.text)?"bg-red-500 scale-105":"hover:bg-neutral-500 hover:scale-102"} transition-all duration-300 ease-in-out`} onClick={()=>{setSee(card.text)}}>
-                    <p className='sm:-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
+                    <p className='sm:sm:-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
                 </div>
                 )
             })}

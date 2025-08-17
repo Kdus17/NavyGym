@@ -2,25 +2,25 @@ import { Clock, Flame, Mail, Phone, Pin, Plane, PlaneIcon, Send } from 'lucide-r
 import React from 'react'
 const fourCards = [
     {
-        symbol: <Pin className='text-red-500 size-10 -skew-x-3'/>,
+        symbol: <Pin className='text-red-500 size-10 sm:-skew-x-3'/>,
         title: "Location",
         blab: "Bole, Addis Ababa",
         secondblab: "Ethiopia"
     },
     {
-        symbol: <Phone className='text-amber-500 size-10 -skew-x-3'/>,
+        symbol: <Phone className='text-amber-500 size-10 sm:-skew-x-3'/>,
         title: "Phone",
         blab: "+25190000000",
         secondblab: "+25191111111"
     },
     {
-        symbol: <Mail className='text-green-500 size-10 -skew-x-3'/>,
+        symbol: <Mail className='text-green-500 size-10 sm:-skew-x-3'/>,
         title: "Email",
         blab: "NavyGym@gmail.com",
         secondblab: "Sup@gmail.com"
     },
     {
-        symbol: <Clock className='text-blue-500 size-10 -skew-x-3'/>,
+        symbol: <Clock className='text-blue-500 size-10 sm:-skew-x-3'/>,
         title: "Hours",
         blab: "24/7 Access Available",
         secondblab: "Drop in anytime!"
@@ -46,17 +46,17 @@ const blank = [
     {
         label: "Name",
         holder: "Your fullname",
-        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
+        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 sm:skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
     },
     {
         label: "Phone",
         holder: "+251 900 000 000",
-        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
+        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 sm:skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
     },
     {
         label: "Email",
         holder: "example@gmail.com",
-        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
+        sty: "bg-gradient-to-r from-neutral-900 to-neutral-800 p-2 sm:skew-x-3 text-neutral-400 outline-none border border-x-0 border-red-500/20 has-focus:border-red-500/80 transition-all duration-200 ease-in-out"
     }
 ]
 
@@ -75,11 +75,11 @@ export default function Contact() {
                 <div className='grid md:grid-cols-2 gap-6'>
                     {fourCards.map((cards,index)=>{
                         return(
-                            <div key={index} className='p-8 flex flex-col bg-neutral-800 border hover:scale-102 transition-all duration-300 ease-in-out border-red-500/20 border-x-0 skew-x-3 gap-2'>
+                            <div key={index} className='p-8 flex flex-col bg-neutral-800 border hover:scale-102 transition-all duration-300 ease-in-out border-red-500/20 border-x-0 sm:skew-x-3 gap-2'>
                                 {cards.symbol}
-                                <span className='text-white font-semibold -skew-x-3'>{cards.title}</span>
-                                <p className='text-neutral-500 -skew-x-3'>{cards.blab}</p>
-                                <p className='text-neutral-500 -skew-x-3'>{cards.secondblab}</p>
+                                <span className='text-white font-semibold sm:-skew-x-3'>{cards.title}</span>
+                                <p className='text-neutral-500 sm:-skew-x-3'>{cards.blab}</p>
+                                <p className='text-neutral-500 sm:-skew-x-3'>{cards.secondblab}</p>
                             </div>
                         )
                     })}
@@ -95,18 +95,18 @@ export default function Contact() {
                         </div>
                         )
                     })}
-                    <div className='bg-red-500/20 text-center p-6 flex text-red-400 skew-x-3'>
-                        <Flame className='text-red-500 -skew-x-3'/>
+                    <div className='bg-red-500/20 text-center p-6 flex text-red-400 sm:skew-x-3'>
+                        <Flame className='text-red-500 sm:-skew-x-3'/>
                         <p>DROP IN ANYTIME - NO APPOINTMENT NEEDED!</p>
-                        <Flame className='text-red-500 -skew-x-3'/>
+                        <Flame className='text-red-500 sm:-skew-x-3'/>
                     </div>
                 </div>
 
-                <div className='bg-gradient-to-r from-neutral-700 to bg-neutral-800 w-full flex flex-col items-center justify-center p-10 skew-x-2 gap-2'>
-                    <Pin className='size-10 text-red-500 -skew-x-2'/>
-                    <h1 className='text-white text-semibold -skew-x-2'>Visit Our Location</h1>
-                    <p className='text-neutral-500 -skew-x-2'>Bole, Addis Ababa, Ethiopia</p>
-                    <span className='text-red-500 transition-all duration-300 ease-in-out p-2 mt-4 hover:bg-red-500 hover:text-white skew-x-3 cursor-pointer'><p className='-skew-x-6'>Get Directions</p></span>
+                <div className='bg-gradient-to-r from-neutral-700 to bg-neutral-800 w-full flex flex-col items-center justify-center p-10 sm:skew-x-2 gap-2'>
+                    <Pin className='size-10 text-red-500 sm:-skew-x-2'/>
+                    <h1 className='text-white text-semibold sm:-skew-x-2'>Visit Our Location</h1>
+                    <p className='text-neutral-500 sm:-skew-x-2'>Bole, Addis Ababa, Ethiopia</p>
+                    <span className='text-red-500 transition-all duration-300 ease-in-out p-2 mt-4 hover:bg-red-500 hover:text-white sm:skew-x-3 cursor-pointer'><p className='sm:-skew-x-6'>Get Directions</p></span>
                 </div>
             </div>
 
@@ -117,10 +117,10 @@ export default function Contact() {
                     <div className='grid md:grid-cols-2 gap-4 mt-5'>
                         {blank.map((blank,index)=>{
                             return(
-                                <div key={index} className={`flex flex-col gap-4 skew-x-3 ${index == 2? "md:col-span-2":""}`}>
-                                    <span className='text-white -skew-x-3 font-semibold'>{blank.label}</span>
+                                <div key={index} className={`flex flex-col gap-4 sm:skew-x-3 ${index == 2? "md:col-span-2":""}`}>
+                                    <span className='text-white sm:-skew-x-3 font-semibold'>{blank.label}</span>
                                     <label  className={blank.sty} >
-                                      <input type="text" name={blank.label} className="w-full h-full outline-none -skew-x-6" placeholder={blank.holder} />
+                                      <input type="text" name={blank.label} className="w-full h-full outline-none sm:-skew-x-6" placeholder={blank.holder} />
                                     </label>
                                 </div>
                             )
@@ -130,19 +130,19 @@ export default function Contact() {
                     <span className='text-white font-semibold mt-5'>Message</span>
                     <label className='skew-x-3 border mt-5 has-focus:border-y-red-600 border-red-500/20 border-x-0 has-focus:border-x-1  has-focus:border-x-red-500/20
                     bg-gradient-to-r from-neutral-900 to-neutral-800 p-2'>
-                        <textarea name="" id="" className='-skew-x-3 w-full outline-none text-neutral-400 resize-none' rows={8}
+                        <textarea name="" id="" className='sm:-skew-x-3 w-full outline-none text-neutral-400 resize-none' rows={8}
                         placeholder='Tell us about your fitness goals, questions, or how we can help you'></textarea>
                     </label>
 
-                    <button className='text-white p-4 w-full flex items-center justify-center bg-red-600 mt-5 skew-x-3'>
-                        <p className='-skew-x-3 flex gap-2'>Send Message <Send className='size-6 '/></p>
+                    <button className='text-white p-4 w-full flex items-center justify-center bg-red-600 mt-5 sm:skew-x-3'>
+                        <p className='sm:-skew-x-3 flex gap-2'>Send Message <Send className='size-6 '/></p>
                     </button>
                 </form>
                 
                 <div className='flex flex-col text-center mt-8 gap-5'>
                     <h2 className='text-white text-xl font-semibold'>Ready to Start Training?</h2>
                     <p className='text-neutral-500'>Skip the forms and just show up. Real lifters don't need appointments.</p>
-                        <span className='skew-x-6 bg-amber-600 text-xl font-semibold uppercase py-4 px-8 self-center cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out'><p className='-skew-x-6'>Walk In today</p></span>
+                        <span className='skew-x-6 bg-amber-600 text-xl font-semibold uppercase py-4 px-8 self-center cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out'><p className='sm:-skew-x-6'>Walk In today</p></span>
                 </div>
 
             </div>
