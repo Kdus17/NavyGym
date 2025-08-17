@@ -6,7 +6,6 @@ import Announce from '../admin/Announcments'
 import Machine from '../admin/Machine'
 
 
-
 const cards = [
     {
         text: "Overview",
@@ -41,9 +40,9 @@ const [see,setSee] = useState([])
             <p className='text-neutral-400 text-xs sm:text-md'>Manage your gym operations and members.</p>
         </div>
         <div className='flex gap-4 sm:gap-8 items-center text-neutral-300 '>
-            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Bell className='size-5'/> <span className='hidden sm:block'>Notification</span></div>
-            <div className='flex items-center gap-2 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out'><Settings className='size-5'/> <span className='hidden sm:block'>Settings</span></div>
-            <div className='flex items-center gap-2 text-red-700 hover:scale-115 hover:-translate-y-1 cursor-pointer transition-all duration-300 ease-in-out' ><LogOutIcon className='size-5'/> <span className='hidden sm:block'>Logout</span></div>
+            <div className='flex items-center gap-2 cursor-pointer'><Bell className='size-5'/> <span className='hidden sm:block'>Notification</span></div>
+            <div className='flex items-center gap-2 cursor-pointer'><Settings className='size-5'/> <span className='hidden sm:block'>Settings</span></div>
+            <div className='flex items-center gap-2 text-red-700 cursor-pointer' ><LogOutIcon className='size-5'/> <span className='hidden sm:block'>Logout</span></div>
         </div>
     </div>
 
@@ -51,7 +50,7 @@ const [see,setSee] = useState([])
         <div className='grid grid-row-4 col-span-2 lg:col-span-1 bg-neutral-800 h-fit p-6 gap-3 border border-x-0 border-red-500/5 sm:skew-x-1 '>
             {cards.map((card,index)=>{
                 return(
-                <div key={index} className='sm:skew-x-3 row-span-1 w-full hover:shadow-2xl  p-4 hover:bg-red-500 hover:scale-105 transition-all duration-300 ease-in-out' onClick={()=>{setSee(card.text)}}>
+                <div key={index} className={`sm:skew-x-3 row-span-1 w-full hover:shadow-2xl p-4 ${see.includes(card.text)?"bg-red-500 scale-105":"hover:bg-neutral-500 hover:scale-102"} transition-all duration-300 ease-in-out`} onClick={()=>{setSee(card.text)}}>
                     <p className='sm:-skew-x-4 text-white font-semibold text-lg flex items-end gap-4'>{card.icon}{card.text}{console.log(see)}</p>
                 </div>
                 )
