@@ -58,7 +58,7 @@ const Facilities = () => {
   const [products,setProd] = useState(equipment);
 
   return (
-    <div id='Facilities' className='flex flex-col items-center gap-4 py-6 bg-neutral-950 w-full pt-20'>
+    <div id='facilities' className='flex flex-col items-center gap-4 py-6 bg-neutral-950 w-full pt-20'>
       <h3 className='text-white font-bold text-3xl'>
         TOP OF THE LINE <span className='text-red-500'>EQUIPIMENT</span>
       </h3>
