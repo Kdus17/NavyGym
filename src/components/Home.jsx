@@ -59,7 +59,7 @@ useEffect(()=>{
                 <h2 className='text-2xl sm:text-3xl text-amber-300 font-bold'>{pages[num].cta}</h2>
                 <p className='text-gray-400 text-lg'>The most intense powerlifting and strength training facility in Addis Ababa. No membership fees, no contracts, no bullshit. Just pure iron and determination.</p>
                 <div className='flex gap-2 p-2 text-xl font-semibold'>
-                    <button className='skew-x-6 p-6 hover:scale-105 bg-red-600 text-white'><p className='-skew-x-6'>Visit Us Today</p></button>
+                    <button className='skew-x-6 p-6 hover:scale-105 bg-red-600 text-white'><p className='sm:-skew-x-6'>Visit Us Today</p></button>
                     <span className='text-red-500 p-6 capitalize'>Watch Our Story</span>
                 </div>
                 <div className='flex self-center  text-white gap-2'>

@@ -43,8 +43,8 @@ useEffect(()=>{
             })}
         </div>
         <div className='md:flex hidden gap-4'>
-            <button className='skew-x-12 hover:bg-gray-200 px-6 py-3'><p className='-skew-x-12'>Login</p></button>
-            <button className='skew-x-12 bg-red-700 font-semibold text-white hover:scale-105 px-6 py-3 transition-all duration-100 ease-in-out'><p className='-skew-x-12'>Vist us</p></button>
+            <button className='skew-x-12 hover:bg-gray-200 px-6 py-3'><p className='sm:-skew-x-12'>Login</p></button>
+            <button className='skew-x-12 bg-red-700 font-semibold text-white hover:scale-105 px-6 py-3 transition-all duration-100 ease-in-out'><p className='sm:-skew-x-12'>Vist us</p></button>
         </div>
         <button className='md:hidden'>
             menu
