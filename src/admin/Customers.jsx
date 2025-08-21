@@ -1,6 +1,6 @@
 import { UserPlus } from 'lucide-react'
 import React, { useState } from 'react'
-import CreateAnn from './CreateAnn'
+import CreateAnn from './CreateCust'
 
 const customers = [
   {

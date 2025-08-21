@@ -1,5 +1,6 @@
 import { Trash, UserPlus } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
+import CreateAnn from './CreateAnn'
 
 const announcments = [
   {
@@ -17,7 +18,9 @@ const announcments = [
 ]
 
 export default function Announce() {
+  const [see,setSee] = useState(false)
   return (
+    <>
     <div className='flex flex-col '>
       <div className='flex justify-between items-center'>
         <span className='text-white sm:text-3xl text-xl font-bold'>Announcment Managment</span>
@@ -44,5 +47,8 @@ export default function Announce() {
       })}
 
     </div>
+    {see &&
+    <CreateAnn setSee={setSee}/>}
+  </>
   )
 }
